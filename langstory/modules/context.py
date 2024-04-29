@@ -14,7 +14,6 @@ class Retriever:
     _map = {}
 
     def __init__(self, namespace: str):
-        # todo 单例 共享连接
         self.path = settings.DATA_DIR / namespace / 'db'
         self.collection = namespace
         self.store = self.get_or_create_vst()
